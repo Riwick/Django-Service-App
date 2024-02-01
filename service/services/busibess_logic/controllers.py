@@ -9,6 +9,3 @@ def get_subscription_model():
         'plan',
         Prefetch('client', queryset=Client.objects.all().select_related('user').
                  only('company_name', 'user__email'))))
-    #
-
-
